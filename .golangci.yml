@@ -1,0 +1,26 @@
+run:
+  timeout: 5m
+linters:
+  enable:
+    - asciicheck
+    - depguard
+    - dogsled
+    - durationcheck
+    - errcheck
+    - errorlint
+    - exportloopref
+    - gci
+    - gofmt
+    - goimports
+    - gosec
+    - misspell
+    - nakedret
+    - nilerr
+    - nolintlint
+    - revive
+    - wastedassign
+issues:
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - gosec # security is not make sense in tests
